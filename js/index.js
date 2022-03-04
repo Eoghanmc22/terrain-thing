@@ -25,7 +25,7 @@ async function main () {
     return chunk;
   });
 
-  const center = new Vec3(150, 150, 150)
+  const center = new Vec3(0, 100, 0)
 
   const worldView = new WorldView(world, viewDistance, center)
 
@@ -47,6 +47,7 @@ async function main () {
   viewer.setVersion(version)
   // Attach controls to viewer
   const controls = new MapControls(viewer.camera, renderer.domElement)
+  controls.translateY(50)
 
   // Link WorldView and Viewer
   viewer.listen(worldView)
