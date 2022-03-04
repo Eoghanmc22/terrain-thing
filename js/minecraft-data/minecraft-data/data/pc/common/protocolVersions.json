@@ -1,0 +1,23 @@
+[
+  {
+    "minecraftVersion": "1.18",
+    "version": 757,
+    "dataVersion": 2860,
+    "usesNetty": true,
+    "majorVersion": "1.18"
+  },
+  {
+    "minecraftVersion": "1.13",
+    "version": 393,
+    "dataVersion": 1519,
+    "usesNetty": true,
+    "majorVersion": "1.13"
+  },
+  {
+    "minecraftVersion": "1.17",
+    "version": 755,
+    "dataVersion": 2724,
+    "usesNetty": true,
+    "majorVersion": "1.17"
+  }
+]
