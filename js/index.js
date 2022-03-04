@@ -47,7 +47,7 @@ async function main () {
   viewer.setVersion(version)
   // Attach controls to viewer
   const controls = new MapControls(viewer.camera, renderer.domElement)
-  controls.translateY(50)
+  controls.translateY(75)
 
   // Link WorldView and Viewer
   viewer.listen(worldView)
