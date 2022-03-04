@@ -1,0 +1,36 @@
+[package]
+name = "web-terrain"
+version = "0.1.0"
+authors = ["Eoghanmc22 <eoghanmc@icloud.com>"]
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+#noise = "0.7.0"
+#noise = { path = "noise"}
+noise = { git = "https://github.com/Eoghanmc22/noise-rs.git" }
+rand = "0.8.4"
+getrandom = { version = "0.2.4",  features = ["js"] }
+
+wasm-bindgen = "0.2.63"
+web-sys = { version = "0.3.56", features = ["console"] }
+console_error_panic_hook = "0.1.6"
+wee_alloc = "0.4.5"
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.13"
+criterion = "0.3.5"
+pprof = { version = "0.6.2", features = ["criterion", "flamegraph"] }
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s"
+
+[profile.bench]
+debug = true
+
+[[bench]]
+name = "generation"
+harness = false

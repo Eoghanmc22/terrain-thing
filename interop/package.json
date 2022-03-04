@@ -1,0 +1,6 @@
+{
+  "main": "index.js",
+  "dependencies": {
+    "vec3": "^0.1.7"
+  }
+}
