@@ -20,7 +20,7 @@ jobs:
 
       - name: Build js module
         working-directory: js
-        run: npm build
+        run: npm install
 
       - uses: s0/git-publish-subdir-action@develop
         env:
