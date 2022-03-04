@@ -53,7 +53,7 @@ const config = {
     asyncWebAssembly: true
   },
   optimization: {
-    minimize: false,
+    //minimize: false,
   }
 }
 
