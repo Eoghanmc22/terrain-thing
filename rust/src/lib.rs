@@ -311,7 +311,7 @@ impl Material {
 
 #[wasm_bindgen]
 pub fn build_chunk(chunk: &JsValue, chunk_x: i32, chunk_z: i32, ptr: *const Config) {
-    build_chunk_internal(&|x, y, z, block| place(chunk, x, y, z, block), chunk_x, chunk_z, ptr)
+    build_chunk_internal(&|x, y, z, block| place(chunk, x, y + 1, z, block), chunk_x, chunk_z, ptr)
 }
 
 // needed for testing
