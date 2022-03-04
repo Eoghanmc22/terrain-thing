@@ -150,8 +150,8 @@ pub fn init(slope_mode: SlopeMode, view_dist: u8) -> *mut Config {
 
     //web_sys::console::log_1(&"init".into());
 
-    let noise: HybridMulti<SuperSimplex> = HybridMulti::new(rand::random()).set_frequency(1.0 / 128.0).set_persistence(0.7).set_octaves(8);
-    let noise: Turbulence<_, SuperSimplex> = Turbulence::new(noise).set_power(10.0).set_frequency(1.0 / 16.0);
+    let noise: HybridMulti<OpenSimplex> = HybridMulti::new(rand::random()).set_frequency(1.0 / 128.0).set_persistence(0.7).set_octaves(8);
+    let noise: Turbulence<_, OpenSimplex> = Turbulence::new(noise).set_power(10.0).set_frequency(1.0 / 16.0);
     let noise = Add::new(noise, Constant::new(1.4));
     let noise = Multiply::new(noise, Constant::new(0.5));
     let noise = Power::new(noise, Constant::new(4.0));
@@ -302,7 +302,7 @@ impl Material {
     }
 
     pub fn noise(&self) -> Box<dyn NoiseFn<f64, 2>> {
-        let noise: Fbm<SuperSimplex> = Fbm::new(self.id() as u32).set_octaves(6).set_frequency(self.roughness()/128.0);
+        let noise: Fbm<OpenSimplex> = Fbm::new(self.id() as u32).set_octaves(6).set_frequency(self.roughness()/128.0);
         let noise = Add::new(noise, Constant::new(1.0));
         let noise = Multiply::new(noise, Constant::new(self.thickness()));
         Box::new(noise)

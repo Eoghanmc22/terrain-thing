@@ -10,7 +10,7 @@ crate-type = ["cdylib", "rlib"]
 [dependencies]
 #noise = "0.7.0"
 #noise = { path = "noise"}
-noise = { git = "https://github.com/Eoghanmc22/noise-rs.git" }
+noise = { git = "https://github.com/Eoghanmc22/noise-rs.git", branch = "develop" }
 rand = "0.8.4"
 getrandom = { version = "0.2.4",  features = ["js"] }
 
