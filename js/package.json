@@ -17,6 +17,8 @@
         "prismarine-viewer": "^1.22.0",
         "prismarine-world": "^3.3.1",
         "three": "0.128.0",
+        "copy-webpack-plugin": "^7.0.0",
+        "canvas": "^2.6.1",
         "vec3": "^0.1.7",
         "assert": "^2.0.0",
         "browserify-zlib": "^0.2.0",
